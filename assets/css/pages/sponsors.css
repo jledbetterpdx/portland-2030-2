@@ -1,0 +1,87 @@
+
+
+/*************/
+/** CONTENT **/
+/*************/
+
+#hero figcaption.tickets {
+    bottom: 20%;
+    font-family: 'Amatic SC', cursive;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 9vw;
+    color: hsl(0, 0%, 90%);
+    text-shadow: 0 0 2vw hsl(0, 0%, 0%);
+    text-align: center;
+}
+
+#sponsors {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+#sponsors.tickets li {
+    display: block;
+    width: 30%;
+    height: 2.2em;
+    margin: 1%;
+    position: relative;
+}
+
+#addresses {
+    width: 100%;
+    display: flex;
+}
+
+#addresses address {
+    width: 48%;
+}
+
+/** Temp **/
+.sponsor.fakehill {
+    font-family: Georgia, "Roboto Slab", serif;
+    font-size: 2em;
+    line-height: 1.1;
+    text-align: center;
+    font-style: italic;
+}
+
+.sponsor.ponzischeme {
+    font-family: 'Amatic SC', cursive;
+    font-size: 3em;
+    line-height: 0.95;
+    text-align: left;
+}
+
+.sponsor.random p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    line-height: 0.9;
+}
+
+.sponsor.random p:first-child {
+    text-align: left !important;
+    font-style: italic;
+}
+
+.sponsor.random p:nth-child(2) {
+    text-align: center !important;
+    font-weight: bold;
+}
+
+.sponsor.random p:last-child {
+    text-align: right !important;
+}
+
+.sponsor.another {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 2.4em;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    line-height: 0.89;
+}

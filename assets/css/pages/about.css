@@ -1,0 +1,29 @@
+
+
+/*************/
+/** CONTENT **/
+/*************/
+
+#hero figcaption.about {
+    font-family: 'Amatic SC', cursive;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 9vw;
+}
+
+#hero figcaption.about.top {
+    top: 15%;
+    text-align: left;
+    color: hsl(0, 0%, 10%);
+    text-shadow: 0 0 1vw #dad6d3;
+    padding-left: 3vw;
+}
+
+#hero figcaption.about.bottom {
+    bottom: 15%;
+    text-align: right;
+    color: hsl(0, 0%, 90%);
+    text-shadow: 0 0 1vw #002240;
+    padding-right: 3vw;
+}
+

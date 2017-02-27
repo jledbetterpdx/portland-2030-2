@@ -1,0 +1,94 @@
+
+
+/*************/
+/** CONTENT **/
+/*************/
+
+#motto {
+    font-size: 1.875rem;
+    padding: 0.5rem 0;
+    font-family: 'Amatic SC', cursive;
+    color: hsl(0, 0%, 10%);
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.1;
+}
+
+#top-banner {
+    height: 2.5rem;
+    font-size: 0.8rem;
+    line-height: 2.5rem;
+    margin: 0;
+    width: 100%;
+    z-index: 4;
+    text-align: center;
+    background-color: #f9d96f;
+    color: hsl(0, 0%, 10%);
+    font-family: 'Lato', sans-serif;
+}
+
+#top-banner a {
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    display: inline-block;
+    border: 1px solid hsl(0, 0%, 10%);
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: hsl(120, 100%, 20%);
+    padding: 2px 4px;
+    color: #fff;
+}
+
+#hero figcaption.init {
+    top: 40%;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 10vw;
+    color: hsl(0, 0%, 90%);
+    text-shadow: 0 0 1vw #a5c5de;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+#hero figcaption.init .different {
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    display: inline-block;
+    letter-spacing: -0.25vw;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 20em) {
+    #motto {
+        font-size: calc(1.875rem + (3.75 - 1.875) * ((100vw - 20rem) / (54 - 20)));
+        padding: calc(0.5rem + (1 - 0.5) * ((100vw - 20rem) / (54 - 20))) 0;
+    }
+
+}
+
+@media only screen and (min-width: 21em) {
+    /* @refactor to dynamically increase with screen size, rejoin with 20em @media query above */
+    #top-banner {
+        height: 3rem;
+        font-size: 0.95rem;
+        line-height: 3rem;
+    }
+
+    #top-banner a {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+}
+
+@media only screen and (min-width: 54em) {
+    #top-banner {
+        font-size: 1.2rem;
+    }
+
+    #motto {
+        font-size: 3.75rem;
+        padding: 1rem 0;
+    }
+}
