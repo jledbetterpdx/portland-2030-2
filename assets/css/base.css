@@ -4,18 +4,6 @@
 /** UNIVERSAL STYLES **/
 /**********************/
 
-/**
- * Choose a sane box model
- * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
-html {
-    box-sizing: border-box;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
 /** DOM **/
 body {
     font-family: 'Merriweather', serif;
@@ -198,19 +186,7 @@ header #logo {
     margin-left: 1rem;
 }
 
-#social_nav {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row nowrap;
-}
-
-#social_nav a {
-    display: inline-block;
-    padding: 1rem;
-    font-size: 1.75rem;
-}
-
-nav#left {
+nav {
     background-color: hsl(0, 0%, 10%);
     color: hsl(0, 0%, 90%);
     margin: 0;
@@ -218,11 +194,11 @@ nav#left {
     display: none;
 }
 
-nav#left.active {
+nav.active {
     display: block;
 }
 
-nav#left ul {
+nav ul#pages {
     list-style-type: none;
     font-family: 'Amatic SC', cursive;
     display: flex;
@@ -231,13 +207,13 @@ nav#left ul {
 
 }
 
-nav#left ul li {
+nav ul#pages li {
     margin: 0;
     display: inline-block;
     width: 33.3%;
 }
 
-nav#left ul li a {
+nav ul#pages li a {
     color: hsl(0, 0%, 90%);
     text-decoration: none;
     display: inline-flex;
@@ -250,11 +226,11 @@ nav#left ul li a {
     padding: 1rem 0;
 }
 
-nav#left ul li.donate a {
+nav ul#pages li.donate a {
     background-color: hsl(120, 100%, 13%);
 }
 
-nav#left ul li a i {
+nav ul#pages li a i {
     font-size: 2.125rem;
     -webkit-transition-duration: 0.2s;
     -moz-transition-duration: 0.2s;
@@ -263,13 +239,41 @@ nav#left ul li a i {
     transition-duration: 0.2s;
 }
 
-nav#left ul li a:hover i {
+nav ul#pages li a:hover i {
     transform: translateY(-0.125rem);
     -webkit-transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
     -ms-transition-duration: 0.4s;
     -o-transition-duration: 0.4s;
     transition-duration: 0.4s;
+}
+
+nav ul#pages li a:hover span {
+    transition-delay: 0s !important;
+}
+
+nav ul#social_nav {
+    list-style-type: none;
+    font-family: 'Amatic SC', cursive;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+nav ul#social_nav li {
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+nav ul#social_nav li a {
+    color: hsl(0, 0%, 90%);
+    text-decoration: none;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.75rem;
 }
 
 /*************/
@@ -346,11 +350,11 @@ footer {
 
 /** 39em and larger **/
 @media only screen and (min-width: 39em) {
-    nav#left ul {
+    nav ul#pages {
         flex-flow: row nowrap;
     }
 
-    nav#left ul li {
+    nav ul#pages li {
         width: 11.1%;
     }
 
@@ -358,7 +362,7 @@ footer {
         display: block;
     }
 
-    #social_nav {
+    nav ul#social_nav {
         display: none;
     }
 }
@@ -373,36 +377,36 @@ footer {
         display: none;
     }
 
-    nav#left {
+    nav {
         display: block;
     }
 
-    nav#left ul {
+    nav ul#pages {
         flex-flow: column nowrap;
         margin: 0.5rem 0;
     }
 
-    nav#left ul li {
+    nav ul#pages li {
         width: 100px;
     }
 
-    nav#left ul li a {
+    nav ul#pages li a {
         padding: 0.5rem 0;
     }
 
-    nav#left ul li.donate a {
+    nav ul#pages li.donate a {
         background-color: transparent;
     }
 
-    nav#left ul:hover li.donate a {
+    nav ul#pages:hover li.donate a {
         background-color: hsl(120, 100%, 13%);
     }
 
-    nav#left ul li a i {
+    nav ul#pages li a i {
         font-size: 2.5rem;
     }
 
-    nav#left ul li a span {
+    nav ul#pages li a span {
         opacity: 0;
         -webkit-transition-duration: 0.2s;
         -moz-transition-duration: 0.2s;
@@ -411,7 +415,7 @@ footer {
         transition-duration: 0.2s;
     }
 
-    nav#left ul:hover li a span {
+    nav ul#pages:hover li a span {
         opacity: 1;
         -webkit-transition-duration: 0.4s;
         -moz-transition-duration: 0.4s;
@@ -420,47 +424,47 @@ footer {
         transition-duration: 0.4s;
     }
 
-    nav#left ul:hover li:nth-child(2) a span {
+    nav ul#pages:hover li:nth-child(2) a span {
         transition-delay: 40ms;
     }
 
-    nav#left ul:hover li:nth-child(3) a span {
+    nav ul#pages:hover li:nth-child(3) a span {
         transition-delay: 80ms;
     }
 
-    nav#left ul:hover li:nth-child(4) a span {
+    nav ul#pages:hover li:nth-child(4) a span {
         transition-delay: 120ms;
     }
 
-    nav#left ul:hover li:nth-child(5) a span {
+    nav ul#pages:hover li:nth-child(5) a span {
         transition-delay: 160ms;
     }
 
-    nav#left ul:hover li:nth-child(6) a span {
+    nav ul#pages:hover li:nth-child(6) a span {
         transition-delay: 200ms;
     }
 
-    nav#left ul:hover li:nth-child(7) a span {
+    nav ul#pages:hover li:nth-child(7) a span {
         transition-delay: 240ms;
     }
 
-    nav#left ul:hover li:nth-child(8) a span {
+    nav ul#pages:hover li:nth-child(8) a span {
         transition-delay: 280ms;
     }
 
-    nav#left ul:hover li:nth-child(9) a span {
+    nav ul#pages:hover li:nth-child(9) a span {
         transition-delay: 320ms;
     }
 
-    nav#left ul:hover li:nth-child(10) a span {
+    nav ul#pages:hover li:nth-child(10) a span {
         transition-delay: 360ms;
     }
 
-    nav#left ul:hover li:nth-child(11) a span {
+    nav ul#pages:hover li:nth-child(11) a span {
         transition-delay: 500ms;
     }
 
-    nav#left ul:hover li:nth-child(12) a span {
+    nav ul#pages:hover li:nth-child(12) a span {
         transition-delay: 550ms;
     }
 
@@ -469,7 +473,7 @@ footer {
         align-items: stretch;
     }
 
-    nav#left {
+    nav {
         display: block;
         width: 100px;
     }
